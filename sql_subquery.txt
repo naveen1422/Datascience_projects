@@ -1,0 +1,5 @@
+#find salary of employees whose salary is more than average salary of employees
+
+select * 
+from employees
+where salary > (select avg(salary) from employees)
