@@ -1,5 +1,42 @@
 #find salary of employees whose salary is more than average salary of employees
 
-select * 
+1) select *
 from employees
 where salary > (select avg(salary) from employees)
+
+#Sub queries joining with main query using union, intersect, except, minus in sql
+
+2) UNION
+--
+select customerid from orders #sq1
+union
+select customerid from customers #sq2
+
+--
+select email from customers
+union
+select email from subscribers
+
+--
+select productname from warehouse1
+where instock =1
+union
+select productname from warehouse2
+where instock 1
+
+--
+select alertid from alert_msk
+where extsource_app_name='gsna'
+union
+select alertid from alert_msk
+where extsource_appname='camp'
+
+#real why we use union two sub queries combines two sql queries
+#need to give 30 examples to check this code and move alone
+#union combine two queries to retrieve the unique list of values and include a separate column to indicate
+#union combines two queries to retrieve the unique list of values uninon operator combimes the results of the
+#two select statements and remove any duplicate rows # select tow statements and remove duplicates
+#final result includes tow columns orddat, and sourcetab each row represents a unique data from either the
+#final result includes unique rows which represents a unique date from two tables along with corresponding source table
+#if u want u can keep union all to use for diuolpoecate records.
+
